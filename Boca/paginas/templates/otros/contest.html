@@ -4,6 +4,7 @@
 {% block headers %}
 =======
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,16 +16,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 {% endblock %}
   {% block content %}
+=======
+{% extends "base2.html" %}
+{% load static %}
+{% block headers %}
+<title>CONTEXT</title>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+    {% endblock %}
+{%block content%}
+<div class="m-0 vh-100 row justify-content-center align-items-center">
+>>>>>>> c3570552e10359e82a9488ec1cf99e830b07e44f
     <div class="col-auto p-5 text-center">
         <h4>Select a contest or create a new one</h4>
         <div class="col-auto p-5 text-center">
         <a class="btn bg-light dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contest Numbers</a>
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                    {% for au in listaO %}  
+                   <!-- {% for au in listaO %}  
                     <li><a class="dropdown-item" href="{% url 'Contest_view' au.id %}">{{ au.get_numero }}</a></li> 
                     {% endfor %}   
-                    <li><a class="dropdown-item" href="{% url 'Contest_new %}">New</a></li>                 
+                    <li><a class="dropdown-item" href="">New</a></li>-->                 
                   </ul> 
                 </div>
                 </div>
+<<<<<<< HEAD
   {% endblock %}
+=======
+              </div>
+                {%endblock%} 
+>>>>>>> c3570552e10359e82a9488ec1cf99e830b07e44f
