@@ -35,6 +35,9 @@ def option(request):
     context = {}
 
     form = optionForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('option')
     
     context['form'] = form
     return render(request,'otros/option.html', context)

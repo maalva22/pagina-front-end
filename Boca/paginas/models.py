@@ -1,6 +1,7 @@
 from email.policy import default
 from django.db import models
 from django.forms import IntegerField
+from django.contrib.auth.backends import BaseBackend
 
 # Create your models here.
 
@@ -54,3 +55,37 @@ class contest(models.Model):
     def __str__(self):
         texto= "{0} ({1})"
         return texto.format(self.Name, self.Number)
+
+class option(models.Model):
+    
+        Username=models.CharField(max_length=200)
+        User_Full_Name = models.CharField(max_length=200)
+        User_Description = models.CharField(max_length=500)
+        Old_Password=models.CharField(max_length=200)
+        New_Password=models.CharField(max_length=200)
+        Retype_New_Password=models.CharField(max_length=200)
+    
+
+        def get_UserName(self):
+            return self.Username
+
+        def get_UserFullName(self):
+            return self.User_Full_Name
+        
+        def get_UserDescription(self):
+            return self.User_Description
+        
+        def get_OldPassword(self):
+            return self.Old_Password
+        
+        def get_NewPassword(self):
+            return self.New_Password
+        
+        def get_RetypeNewPassword(self):
+            return self.Retype_New_Password
+        
+    
+
+        def _str_(self):
+            texto= "{0} ({1})"
+            return texto.format(self.Username, self.User_Full_Name)

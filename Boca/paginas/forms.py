@@ -1,7 +1,6 @@
 from django import forms
 
-from Boca.paginas.views import option
-from .models import contest
+from .models import contest,option
  
 
 class contestForm(forms.ModelForm):
@@ -33,10 +32,10 @@ class optionForm(forms.ModelForm):
 
         #especificar los campos
         fields = [
-            'UserName',
-            'UserFullName',
-            'UserDescription', 
-            'OldPassword',
-            'NewPassword',
-            'RetypeNewPassword',
+            'Username',
+            'User_Full_Name',
+            'User_Description', 
+            'Old_Password',
+            'New_Password',
+            'Retype_New_Password',
         ]
