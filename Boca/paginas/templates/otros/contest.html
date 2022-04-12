@@ -15,7 +15,7 @@
                     {% for au in listaO %}  
                     <li><a class="dropdown-item" href="{% url 'Contest_view' au.id %}">{{ au.get_numero }}</a></li> 
                     {% endfor %}   
-                    <li><a class="dropdown-item" href="">New</a></li>                 
+                    <li><a class="dropdown-item" href="{% url 'new_contest' %}">New</a></li>                 
                   </ul> 
                 </div>
                 </div>
