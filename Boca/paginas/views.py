@@ -6,6 +6,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.views.generic.detail import DetailView
 
+from .models import contest
 from .forms import contestForm, optionForm
 # Create your views here.
 def index(request):
@@ -13,9 +14,15 @@ def index(request):
     context = {}
     return HttpResponse(template.render(context,request))
 
-def contest(request):
-    template = loader.get_template('otros/contest.html')
+def administrador(request):
+    template = loader.get_template('otros/administrator.html')
     context = {}
+    return HttpResponse(template.render(context,request))
+
+def contestv(request):
+    lista = contest.objects.all()
+    context = {'lista':lista}
+    template = loader.get_template('otros/contest.html')
     return HttpResponse(template.render(context,request))
 
 def new_contest(request):

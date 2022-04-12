@@ -12,8 +12,8 @@
         <div class="col-auto p-5 text-center">
         <a class="btn bg-light dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contest Numbers</a>
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                    {% for au in listaO %}  
-                    <li><a class="dropdown-item" href="{% url 'Contest_view' au.id %}">{{ au.get_numero }}</a></li> 
+                    {% for au in lista %}  
+                    <li><a class="dropdown-item" href="">{{ au.get_Numero }}</a></li> 
                     {% endfor %}   
                     <li><a class="dropdown-item" href="{% url 'new_contest' %}">New</a></li>                 
                   </ul> 
