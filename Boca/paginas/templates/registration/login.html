@@ -7,7 +7,8 @@
 {% endblock %}
 
 {% block content %}
-<form style="margin-top: 10%;">
+<form method="post" action="{% url 'login' %}" style="margin-top: 10%; border: solid; border-radius: 3em; border-color: silver;">
+  {% csrf_token %}
   <p class="text-center">SISTEMAS DE COMPETENCIAS BOCA</p>
   <img src="{% static 'css/usuario2.png' %}" width="50" height="50" alt="">
   <div class="form-group">
@@ -22,6 +23,7 @@
   <div class="justify-content-center align-items-center">
     <div class="col-auto p-5 text-center">
     <input type="submit" value="INGRESAR" class="btn btn-outline-secondary"/>
+    
   </div>
   </form>
   {% endblock %}
