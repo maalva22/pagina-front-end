@@ -9,18 +9,19 @@
 {% block content %}
 <form style="margin-top: 10%;">
   <p class="text-center">SISTEMAS DE COMPETENCIAS BOCA</p>
-  <img src="{% static 'css/usuario2.png' %}" width="40" height="40" alt="">
+  <img src="{% static 'css/usuario2.png' %}" width="50" height="50" alt="">
   <div class="form-group">
-    <label for="exampleFormControlInput1">USUARIO: </label>
-    <input type="email" class="form-control" id="formcontrol">
+    <label for="exampleFormControlInput1" style="margin-right: 15px;">USUARIO: </label>
+    {{form.username}}
+    
   </div>
   <div class="form-group">
-    <label for="exampleFormControlSelect1">CONTRASEÑA: </label>
-    <input type="password" class="form-control" id="formcontrol">
+    <label for="exampleFormControlSelect1" style="margin-right: 33px; margin-top: 15px;">CLAVE: </label>
+   {{ form.password }}
   </div>
   <div class="justify-content-center align-items-center">
     <div class="col-auto p-5 text-center">
-    <button type="button" class="btn btn-outline-secondary" text-align:"center">Registrarse</button>
+    <input type="submit" value="INGRESAR" class="btn btn-outline-secondary"/>
   </div>
   </form>
   {% endblock %}

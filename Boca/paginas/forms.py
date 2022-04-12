@@ -10,15 +10,17 @@ class contestForm(forms.ModelForm):
 
         #especificar los campos
         fields = [
-            'Numero',
-            'Name',
-            'startDate', 
+            'Number',
+            'Name', 
+            'start_Date', 
             'Duration',
-            'StopAnswering',
-            'StopScoreboard',
+            'Stop_Answering',
+            'Stop_Scoreboard',
             'Penalty',
-            'MaxFileSize',
-            'URL',
-            'ContestM',
-            'ContestL',
+            'Max_file_size_allowed_for_teams',
+            'Contest_mainsite_URL',
+            'Contest_Main_site_number',
+            'Contest_local_site_numer',
+
+            
         ]

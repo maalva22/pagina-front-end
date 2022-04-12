@@ -6,51 +6,51 @@ from django.forms import IntegerField
 
 class contest(models.Model):
     
-    Numero=models.IntegerField()
+    Number=models.IntegerField()
     Name = models.CharField(max_length=200)
-    startDate = models.DateField()
+    start_Date = models.DateField()
     Duration=models.IntegerField()
-    StopAnswering=models.IntegerField()
-    StopScoreboard=models.IntegerField()
+    Stop_Answering=models.IntegerField()
+    Stop_Scoreboard=models.IntegerField()
     Penalty=models.IntegerField()
-    MaxFileSize=models.IntegerField()
-    URL= models.CharField(max_length=200, default="Link")
-    ContestM=models.IntegerField()
-    ContestL=models.IntegerField()
+    Max_file_size_allowed_for_teams=models.IntegerField()
+    Contest_mainsite_URL= models.CharField(max_length=200)
+    Contest_Main_site_number=models.IntegerField()
+    Contest_local_site_numer=models.IntegerField()
 
     def get_Numero(self):
-        return self.Numero
+        return self.Number
 
     def get_Name(self):
         return self.Name
         
     def get_StartDate(self):
-        return self.startDate
+        return self.start_Date
         
     def get_Duration(self):
         return self.Duration
         
     def get_StopAnswering(self):
-        return self.StopAnswering
+        return self.Stop_Answering
         
     def get_StopScoreBoard(self):
-        return self.StopScoreboard
+        return self.Stop_Scoreboard
         
     def get_Penalty(self):
         return self.Penalty
 
     def get_MaxFileSize(self):
-        return self.MaxFileSize
+        return self.Max_file_size_allowed_for_teams
 
     def get_URL(self):
-        return self.URL
+        return self.Contest_mainsite_URL
 
     def get_ContestM(self):
-        return self.ContestM
+        return self.Contest_Main_site_number
 
     def get_ContestL(self):
-        return self.ContestL
+        return self.Contest_local_site_numer
 
     def __str__(self):
         texto= "{0} ({1})"
-        return texto.format(self.Name, self.Numero)
+        return texto.format(self.Name, self.Number)
