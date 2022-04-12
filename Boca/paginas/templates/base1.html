@@ -12,20 +12,32 @@
     {% endblock %}
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #F6FF36">
-        <a class="navbar-brand" href="#">BOCA</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-       <!-- {% if user.is_authenticated %}
-          <li class="navbar-nav ml-auto">
-          <a class="nav-link" aria-current="page" href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
-          {% else %}
-          <li class="navbar-nav">
-          <a class="nav-link" aria-current="page" href="{% url 'login'%}?next={{request.path}}">login</a></li>
-          </li>
-          {% endif %}--> 
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: yellow;">
+      
+        <div class="container-fluid"><img src="{% static 'css/logo.png' %}" width="90" height="60" alt="">
+            <a href="{% url 'index' %}"> </a>
+          <a class="navbar-brand" href="{% url 'index' %}"><h2>BOCA</h2></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                             
+                  </ul> 
+                  {% if user.is_authenticated %}
+                  <li class="navbar-nav ml-auto">
+                  <a class="nav-link" aria-current="page" href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+                  {% else %}
+                  <li class="navbar-nav">
+                  <a class="nav-link" aria-current="page" href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+                  </li>
+                  {% endif %} 
+              </li>
+              
+            </div>
+            
+          
+        </div>
       </nav>
       {% block content %}
     {% endblock %}

@@ -7,16 +7,15 @@
 {% endblock %}
 
 {% block content %}
-  <form action="">
-    <h3>SISTEMA DE COMPETENCIAS BOCA</h3>
-    <img src = usuario.jpg;>
-    <h4>USUARIO:</h4>
-    <input type="text" class="field"><br/>
-
-    <h4>CONTRASEÑA:</h4>
-    <input type="text" class="field"><br/>
-
-    <p class="center-content">
-      <input type="submit" class="btn btn-green" value="Registrarse">
-    </p>
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">USUARIO: </label>
+    <input type="email" class="form-control" id="formcontrol" placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">CONTRASEÑA: </label>
+    <input type="password" class="form-control" id="formcontrol">
+  </div>
+  <button type="button" class="btn btn-outline-secondary" text-align:"center">Registrarse</button>
+</form>
   {% endblock %}
