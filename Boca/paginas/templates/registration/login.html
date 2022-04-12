@@ -1,0 +1,22 @@
+{% extends "base1.html" %}
+{% load static %}
+
+{% block headers %}
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+  <form action="">
+    <h3>SISTEMA DE COMPETENCIAS BOCA</h3>
+    <img src = usuario.jpg;>
+    <h4>USUARIO:</h4>
+    <input type="text" class="field"><br/>
+
+    <h4>CONTRASEÑA:</h4>
+    <input type="text" class="field"><br/>
+
+    <p class="center-content">
+      <input type="submit" class="btn btn-green" value="Registrarse">
+    </p>
+  {% endblock %}
