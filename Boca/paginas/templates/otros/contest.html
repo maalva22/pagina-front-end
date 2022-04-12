@@ -1,5 +1,5 @@
-<!--{% extends "base_template.html" %} -->
-<!--{% load static %} -->
+{% extends "base2.html" %} 
+{% load static %} 
 {% block headers %}
 <title>CONTEST</title>
     <!-- Core theme CSS (includes Bootstrap)-->
@@ -15,7 +15,7 @@
                     {% for au in listaO %}  
                     <li><a class="dropdown-item" href="{% url 'Contest_view' au.id %}">{{ au.get_numero }}</a></li> 
                     {% endfor %}   
-                    <li><a class="dropdown-item" href="{% url 'Contest_new %}">New</a></li>                 
+                    <li><a class="dropdown-item" href="">New</a></li>                 
                   </ul> 
                 </div>
                 </div>
